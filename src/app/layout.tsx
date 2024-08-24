@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Baloo_2 } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import SideNavbar from "@/components/SideNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
+const baloo = Baloo_2({ subsets: ["vietnamese"], variable: "--font-baloo" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +18,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en"
+      data-theme="retro"
+    >
+      <body className={`${inter.className} ${baloo.variable} `}>
+        {/* <Navbar /> */}
+        <SideNavbar />
+        {children}
+      </body>
     </html>
   );
 }

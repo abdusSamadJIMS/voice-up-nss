@@ -9,6 +9,45 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  email        String
+  password     String
+  fakeName     String
+  emailIsValid Boolean  @default(false)
+  isAdmin      Boolean  @default(false)
+  posts        Post[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Post {
+  id              String        @id @default(auto()) @map("_id") @db.ObjectId
+  complaintTypeId String        @db.ObjectId
+  userId          String        @db.ObjectId
+  content         String
+  resolved        Boolean       @default(false)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  User            User          @relation(fields: [userId], references: [id])
+  complaintType   ComplaintType @relation(fields: [complaintTypeId], references: [id])
+}
+
+model EmailVerification {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String
+  otp       String
+  expiresAt DateTime
+}
+
+model ComplaintType {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  posts     Post[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

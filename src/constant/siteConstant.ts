@@ -1,0 +1,1 @@
+export const siteName = "Voice Up"
