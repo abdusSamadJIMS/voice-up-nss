@@ -3,6 +3,7 @@ import { Inter, Baloo_2 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import SideNavbar from "@/components/SideNavbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const baloo = Baloo_2({ subsets: ["vietnamese"], variable: "--font-baloo" });
@@ -25,6 +26,7 @@ export default function RootLayout({
         {/* <Navbar /> */}
         <SideNavbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

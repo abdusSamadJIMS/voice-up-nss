@@ -8,7 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-
+      // screens: {
+      //   "xs": { 'min': '590px' },
+      // },
     },
   },
   plugins: [

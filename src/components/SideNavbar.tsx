@@ -8,42 +8,64 @@ import { MdOutlineForum } from 'react-icons/md'
 
 const SideNavbar = () => {
     return (
-        <div className='fixed right-3 top-0 h-screen  z-20 
-        flex
-        flex-col
-justify-between
-items-center
-py-10
+        <div className='
+                        max-sm:border
+                        fixed 
+                        sm:right-3
+                        sm:top-0
+                        max-sm:bottom-5
+                        max-sm:left-[5%]
+                        max-sm:w-[90%]
+                        max-sm:mx-auto
+                        sm:h-screen
+                        max-sm:h-14
+                        z-20 
+                        flex
+                        sm:flex-col
+                        justify-between
+                        items-center
+                        sm:py-10
+                        max-sm:px-5
+                        max-sm:flex-wrap
+                        max-sm:rounded-full
+                        max-sm:backdrop-blur-sm
         '>
             <div className=''>
-                <FaRegUserCircle
-                    className='text-4xl 
+                <Link
+                    href={""} className=''>
+
+                    <FaRegUserCircle
+                        className='sm:text-4xl text-2xl
                     text-white rounded-full
                     border border-orange-300
                     '
-                />
-            </div>
-            <div className='  flex-1 flex flex-col justify-center gap-6 items-center'>
-                <Link href={"/"} className='border-2 p-2 rounded-full border-orange-300'>
-                    <IoHomeOutline className='text-white text-3xl scale-105' />
-                </Link>
-                <Link href={"/"}>
-                    <RiCameraLensLine className='text-white text-3xl' />
-                </Link>
-                <Link href={"/"}>
-                    <RiTeamLine className='text-white text-3xl' />
-                </Link>
-                <Link href={"/"}>
-                    <MdOutlineForum className='text-white text-3xl' />
+                    />
                 </Link>
             </div>
-            <div className='  text-neutral-content flex flex-col justify-center items-center'>
-                <h2 className='text-xl font-light'>Initiative By</h2>
-                <GradientText className='text-7xl font-baloo font-extrabold 
+            <div className=' flex-1 flex sm:flex-col justify-center sm:gap-6 gap-4 items-center'>
+                <Link href={"/"} className='border-2 p-1 sm:p-2 rounded-full border-orange-300 scale-105'>
+                    <IoHomeOutline className='text-white sm:text-3xl text-xl ' />
+                </Link>
+                <Link href={"/"}>
+                    <RiCameraLensLine className='text-white sm:text-3xl text-xl' />
+                </Link>
+                <Link href={"/"}>
+                    <RiTeamLine className='text-white sm:text-3xl text-xl' />
+                </Link>
+                <Link href={"/"}>
+                    <MdOutlineForum className='text-white sm:text-3xl text-xl' />
+                </Link>
+            </div>
+            <div className='max-sm:w-full max-sm:hidden  text-neutral-content flex flex-col justify-center items-center'>
+                <div className='max-sm:self-end'>
+
+                    <h2 className='sm:text-xl text-xs font-light'>Initiative By</h2>
+                    <GradientText className='sm:text-7xl text-4xl font-baloo font-extrabold 
                 to-green-600  via-white from-orange-500 bg-gradient-to-br
                 '>
-                    NSS
-                </GradientText>
+                        NSS
+                    </GradientText>
+                </div>
             </div>
         </div>
     )
