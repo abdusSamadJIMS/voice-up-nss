@@ -3,9 +3,9 @@ import Hero from './Hero'
 
 const VisionSection = () => {
   return (
-    <div>
+    <section id='visionSection'>
       <Hero />
-    </div>
+    </section>
   )
 }
 

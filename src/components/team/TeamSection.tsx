@@ -3,9 +3,11 @@ import Hero from './Hero'
 
 const TeamSection = () => {
     return (
-        <div>
+        <section
+            id='teamSection'
+        >
             <Hero />
-        </div>
+        </section>
     )
 }
 

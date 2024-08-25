@@ -10,9 +10,9 @@ const Hero = () => {
     return (
         <div
             className={`hero min-h-[110vh] h-screen relative bg-fixed bg-center bg-no-repeat
-            sm:bg-[url('/images/teamBg.jpg')]
-            bg-[url('/images/heroBgMobile.jpg')]
-            `}
+                bg-[url('/images/teamBg.jpg')]
+            `
+            }
         // style={{
         //     backgroundImage: "url(/images/heroBg.jpg)",
         // }}
@@ -25,8 +25,9 @@ const Hero = () => {
                         <GradientText
                             className='font-extrabold
                             font-baloo
-                            text-[9rem]
-                            leading-[8.5rem]
+                            md:text-[9rem]
+                            md:leading-[8.5rem]
+                            text-8xl
                             text-left
                             py-5
                             '

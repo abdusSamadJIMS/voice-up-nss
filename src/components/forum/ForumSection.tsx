@@ -3,9 +3,12 @@ import Hero from './Hero'
 
 const ForumSection = () => {
     return (
-        <div>
+        <section
+            id='publicForumSection'
+        >
+
             <Hero />
-        </div>
+        </section>
     )
 }
 

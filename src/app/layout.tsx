@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en"
       data-theme="retro"
     >
-      <body className={`${inter.className} ${baloo.variable} `}>
+      <body className={`${inter.className} ${baloo.variable}`}>
         {/* <Navbar /> */}
         <SideNavbar />
         {children}

@@ -7,7 +7,8 @@ import Logo from '../ui/Logo'
 
 const Hero = () => {
     return (
-        <div
+        <section
+            id='home'
             className={`hero min-h-screen h-screen relative bg-fixed bg-center bg-no-repeat
             sm:bg-[url('/images/heroBg.jpg')]
             bg-[url('/images/heroBgMobile.jpg')]
@@ -35,12 +36,13 @@ const Hero = () => {
                     </GradientText>
                     <MyButton
                         btnClassName='max-sm:backdrop-blur-0 '
+                        text='Voice Up Now'
                     />
                 </div>
             </div>
 
             <Logo />
-        </div>
+        </section>
     )
 }
 

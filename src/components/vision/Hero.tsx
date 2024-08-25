@@ -10,7 +10,7 @@ const Hero = () => {
         <div
             className={`hero min-h-[110vh] h-screen relative bg-fixed bg-center bg-no-repeat
             sm:bg-[url('/images/visionBg.jpg')]
-            bg-[url('/images/heroBgMobile.jpg')]
+            bg-[url('/images/visionBgMobile.jpg')]
             `}
         // style={{
         //     backgroundImage: "url(/images/heroBg.jpg)",
@@ -18,9 +18,9 @@ const Hero = () => {
         >
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content h-full   w-full justify-start text-neutral-content text-center
-            grid grid-cols-2
+            grid sm:grid-cols-2 grid-cols-1 
             ">
-                <div className='h-full py-20 flex items-end'>
+                <div className='h-full py-20 flex items-end sm:order-first order-last'>
                     <p
                         className='font-bold tracking-wide text-balance'
                     >
@@ -33,8 +33,9 @@ const Hero = () => {
                         <GradientText
                             className='font-extrabold
                             font-baloo
-                            text-[9rem]
-                            leading-[8.5rem]
+                            md:text-[9rem]
+                            md:leading-[8.5rem]
+                            text-8xl
                             text-right
                             py-5
                             '

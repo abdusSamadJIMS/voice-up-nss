@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { IoHomeOutline } from 'react-icons/io5'
 import { RiCameraLensLine, RiTeamLine } from 'react-icons/ri'
 import { MdOutlineForum } from 'react-icons/md'
+import NavItems from './NavItems'
+import UserButton from './UserButton'
 
 const SideNavbar = () => {
     return (
@@ -31,39 +33,18 @@ const SideNavbar = () => {
                         max-sm:backdrop-blur-sm
         '>
             <div className=''>
-                <Link
-                    href={""} className=''>
-
-                    <FaRegUserCircle
-                        className='sm:text-4xl text-2xl
-                    text-white rounded-full
-                    border border-orange-300
-                    '
-                    />
-                </Link>
+                <UserButton />
             </div>
-            <div className=' flex-1 flex sm:flex-col justify-center sm:gap-6 gap-4 items-center'>
-                <Link href={"/"} className='border-2 p-1 sm:p-2 rounded-full border-orange-300 scale-105'>
-                    <IoHomeOutline className='text-white sm:text-3xl text-xl ' />
-                </Link>
-                <Link href={"/"}>
-                    <RiCameraLensLine className='text-white sm:text-3xl text-xl' />
-                </Link>
-                <Link href={"/"}>
-                    <RiTeamLine className='text-white sm:text-3xl text-xl' />
-                </Link>
-                <Link href={"/"}>
-                    <MdOutlineForum className='text-white sm:text-3xl text-xl' />
-                </Link>
-            </div>
+            <NavItems />
             <div className='max-sm:w-full max-sm:hidden  text-neutral-content flex flex-col justify-center items-center'>
                 <div className='max-sm:self-end'>
 
-                    <h2 className='sm:text-xl text-xs font-light'>Initiative By</h2>
-                    <GradientText className='sm:text-7xl text-4xl font-baloo font-extrabold 
+                    <h2 className='sm:text-sm text-right text-xs font-light'>Initiative By</h2>
+                    <GradientText className='sm:text-sm text-4xl font-baloo font-extrabold 
                 to-green-600  via-white from-orange-500 bg-gradient-to-br
+                text-right
                 '>
-                        NSS
+                        NSS CELL, <br /> JIMS,<br /> VASANT KUNJ
                     </GradientText>
                 </div>
             </div>
