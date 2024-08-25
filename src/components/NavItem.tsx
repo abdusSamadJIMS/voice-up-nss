@@ -24,7 +24,7 @@ const NavItem = ({
     // }
     return (
         <Link
-            href={`#${option.id}`}
+            href={`/#${option.id}`}
             // onClick={handleClick}
             className={cn('transition-all p-1 sm:p-2 rounded-full border border-transparent hover:border-2 hover:border-orange-300 hover:scale-105',
                 // isSelected && "border-2 border-orange-300 scale-105",

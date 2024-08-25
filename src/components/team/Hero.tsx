@@ -20,7 +20,7 @@ const Hero = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content h-full   w-full justify-start text-neutral-content text-center
             ">
-                <div className='h-full mx-auto  w-full  py-5'>
+                <div className='h-full mx-auto  w-full  py-5 flex flex-col justify-between'>
                     <h3 className='sticky top-0'>
                         <GradientText
                             className='font-extrabold
@@ -36,7 +36,9 @@ const Hero = () => {
                             Team
                         </GradientText>
                     </h3>
-                    <TeamCards />
+                    <div>
+                        <TeamCards />
+                    </div>
                 </div>
             </div>
         </div>

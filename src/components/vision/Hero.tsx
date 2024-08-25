@@ -19,6 +19,7 @@ const Hero = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content h-full   w-full justify-start text-neutral-content text-center
             grid sm:grid-cols-2 grid-cols-1 
+            max-w-5xl
             ">
                 <div className='h-full py-20 flex items-end sm:order-first order-last'>
                     <p

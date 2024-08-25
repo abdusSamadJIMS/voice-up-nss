@@ -9,16 +9,19 @@ const Hero = () => {
     return (
         <section
             id='home'
-            className={`hero min-h-screen h-screen relative bg-fixed bg-center bg-no-repeat
+            className={`hero  h-screen relative bg-fixed bg-center bg-no-repeat
             sm:bg-[url('/images/heroBg.jpg')]
             bg-[url('/images/heroBgMobile.jpg')]
+            
             `}
         // style={{
         //     backgroundImage: "url(/images/heroBg.jpg)",
         // }}
         >
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="hero-content  w-full justify-start text-neutral-content text-center">
+            <div className="hero-content  w-full justify-start text-neutral-content text-center
+            
+            ">
                 <div className="max-w-lg ">
                     <h1 className="mb-5 
                      md:text-5xl

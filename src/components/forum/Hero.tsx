@@ -9,7 +9,7 @@ import ComplaintList from './ComplaintList'
 const Hero = () => {
     return (
         <div
-            className={`hero min-h-[110vh] h-screen relative bg-fixed bg-center bg-no-repeat
+            className={`hero min-h-screen h-screen relative bg-fixed bg-center bg-no-repeat
             bg-[url('/images/forumBg.jpg')]
             `}
         // style={{
@@ -19,6 +19,7 @@ const Hero = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content h-full   w-full justify-start text-neutral-content text-center
             grid sm:grid-cols-2 grid-cols-1
+            max-w-5xl
             ">
                 <div className='h-full w-full '>
                     <h3 className='sticky top-0
@@ -43,10 +44,10 @@ const Hero = () => {
                         </GradientText>
                     </h3>
                 </div>
-                <div className='h-full w-full flex items-start  py-10'>
-                    <div className='h-96 sm:h-[40rem] w-full bg-secondary/40
+                <div className='h-[90%] w-full  flex items-end '>
+                    <div className='h-[40vh] sm:h-[60vh] mt-10 w-full bg-secondary/40
                     rounded-xl
-                    backdrop-blur-sm sticky top-0 
+                    backdrop-blur-sm sticky top-20
                     overflow-auto
                     '>
                         <ComplaintList />

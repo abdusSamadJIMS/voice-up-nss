@@ -21,8 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en"
       data-theme="retro"
+      className="no-scrollbar"
     >
-      <body className={`${inter.className} ${baloo.variable}`}>
+      <body className={`${inter.className} ${baloo.variable} no-scrollbar`}>
         {/* <Navbar /> */}
         <SideNavbar />
         {children}

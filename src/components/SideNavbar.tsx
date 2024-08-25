@@ -1,16 +1,39 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import GradientText from './GradientText'
-import { FaRegUserCircle } from 'react-icons/fa'
-import Link from 'next/link'
-import { IoHomeOutline } from 'react-icons/io5'
-import { RiCameraLensLine, RiTeamLine } from 'react-icons/ri'
-import { MdOutlineForum } from 'react-icons/md'
 import NavItems from './NavItems'
 import UserButton from './UserButton'
 
 const SideNavbar = () => {
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true)
+
+    const handleScroll = () => {
+        const currentScrollPos = window.scrollY
+
+        if (currentScrollPos > prevScrollPos) {
+
+
+            setVisible(false)
+        } else {
+
+            setVisible(true)
+        }
+
+        setPrevScrollPos(currentScrollPos)
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => window.removeEventListener('scroll', handleScroll)
+    })
+
+
+
+
     return (
-        <div className='
+        <div className={`
                         max-sm:border
                         fixed 
                         sm:right-3
@@ -31,7 +54,10 @@ const SideNavbar = () => {
                         max-sm:flex-wrap
                         max-sm:rounded-full
                         max-sm:backdrop-blur-sm
-        '>
+                        ${!visible ? 'max-sm:translate-y-20' : ''}
+                        transition-all
+
+        `}>
             <div className=''>
                 <UserButton />
             </div>
