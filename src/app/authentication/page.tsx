@@ -1,10 +1,12 @@
 import Hero from '@/components/authentication/Hero'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 const page = () => {
     return (
         <main className='min-h-screen'>
-            <Hero />
+            <Suspense>
+                <Hero />
+            </Suspense>
         </main>
     )
 }
